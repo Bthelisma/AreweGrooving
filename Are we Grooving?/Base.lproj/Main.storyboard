@@ -1,24 +1,134 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="dyM-XX-sGe">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Root-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Root" id="BYZ-38-t0r" customClass="RootVC" customModule="Are_we_Grooving_" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="abstract-2027962_640" translatesAutoresizingMaskIntoConstraints="NO" id="M3K-Rb-cET">
+                                <rect key="frame" x="64" y="128" width="247" height="131.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="M3K-Rb-cET" secondAttribute="height" multiplier="15:8" id="MVT-wd-xbD"/>
+                                </constraints>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ClE-qI-Fgx">
+                                <rect key="frame" x="64" y="440" width="247" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="247" id="4ry-99-awN"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rJt-m8-ZTc">
+                                <rect key="frame" x="115" y="550" width="145" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="145" id="eWJ-0T-9Xf"/>
+                                </constraints>
+                                <state key="normal" title="Get your groove on!!!"/>
+                                <connections>
+                                    <segue destination="nld-7Q-PFV" kind="presentation" id="uG5-Xs-XMy"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="M3K-Rb-cET" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="64" id="YsU-ak-wWE"/>
+                            <constraint firstItem="rJt-m8-ZTc" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="486" id="cG0-ZN-Y2b"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="rJt-m8-ZTc" secondAttribute="trailing" constant="115" id="g1T-Jb-M44"/>
+                            <constraint firstItem="rJt-m8-ZTc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="115" id="gtQ-wd-Zdl"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ClE-qI-Fgx" secondAttribute="trailing" constant="64" id="hvs-Kt-d9Z"/>
+                            <constraint firstItem="M3K-Rb-cET" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="64" id="m6b-Bf-xdK"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="rJt-m8-ZTc" secondAttribute="bottom" constant="43" id="oSe-ht-JbS"/>
+                            <constraint firstItem="ClE-qI-Fgx" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="376" id="rgt-yQ-6gK"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="M3K-Rb-cET" secondAttribute="trailing" constant="64" id="tYP-06-Q92"/>
+                            <constraint firstItem="ClE-qI-Fgx" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="64" id="xn6-Uh-E2G"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="PuM-lF-owk"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="nameTextField" destination="ClE-qI-Fgx" id="q3z-4C-GOD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="140" y="24.7376311844078"/>
+        </scene>
+        <!--Groove-->
+        <scene sceneID="P5Z-iX-D0U">
+            <objects>
+                <viewController title="Groove" id="nld-7Q-PFV" customClass="GrooveVC" customModule="Are_we_Grooving_" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gn3-0J-RcY">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qPb-f6-Cbo">
+                                <rect key="frame" x="36" y="629" width="303" height="30"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bbx-Vh-4Mo">
+                                <rect key="frame" x="36" y="592.5" width="303" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Y3Q-b1-ZYd" firstAttribute="bottom" secondItem="qPb-f6-Cbo" secondAttribute="bottom" constant="8" id="IX2-KC-13p"/>
+                            <constraint firstItem="qPb-f6-Cbo" firstAttribute="top" secondItem="bbx-Vh-4Mo" secondAttribute="bottom" constant="16" id="UDy-p6-4Pg"/>
+                            <constraint firstItem="Y3Q-b1-ZYd" firstAttribute="trailing" secondItem="bbx-Vh-4Mo" secondAttribute="trailing" constant="36" id="UbC-5B-wwj"/>
+                            <constraint firstItem="Y3Q-b1-ZYd" firstAttribute="trailing" secondItem="qPb-f6-Cbo" secondAttribute="trailing" constant="36" id="lri-P9-Rla"/>
+                            <constraint firstItem="bbx-Vh-4Mo" firstAttribute="leading" secondItem="Y3Q-b1-ZYd" secondAttribute="leading" constant="36" id="pLa-vo-cjv"/>
+                            <constraint firstItem="qPb-f6-Cbo" firstAttribute="leading" secondItem="Y3Q-b1-ZYd" secondAttribute="leading" constant="36" id="suf-0O-LUm"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Y3Q-b1-ZYd"/>
+                    </view>
+                    <connections>
+                        <outlet property="grooveViewOutlet" destination="gn3-0J-RcY" id="gLS-rA-G3t"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="niY-86-sUx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="976.79999999999995" y="-146.17691154422789"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="atC-S8-Wtv">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="dyM-XX-sGe" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="SC4-eg-rIi">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="NdB-Mr-ao1"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ThZ-6w-E9n" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-714" y="25"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="abstract-2027962_640" width="640" height="530"/>
+    </resources>
 </document>

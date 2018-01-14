@@ -8,20 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		5898C734200B30DD00A0A63A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5898C733200B30DD00A0A63A /* AppDelegate.swift */; };
-		5898C736200B30DD00A0A63A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5898C735200B30DD00A0A63A /* ViewController.swift */; };
+		5898C736200B30DD00A0A63A /* RootVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5898C735200B30DD00A0A63A /* RootVC.swift */; };
 		5898C739200B30DD00A0A63A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5898C737200B30DD00A0A63A /* Main.storyboard */; };
 		5898C73B200B30DD00A0A63A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5898C73A200B30DD00A0A63A /* Assets.xcassets */; };
 		5898C73E200B30DD00A0A63A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5898C73C200B30DD00A0A63A /* LaunchScreen.storyboard */; };
+		5898C748200BD5EB00A0A63A /* GrooveVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5898C747200BD5EB00A0A63A /* GrooveVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		5898C730200B30DD00A0A63A /* Are we Grooving?.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Are we Grooving?.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5898C733200B30DD00A0A63A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		5898C735200B30DD00A0A63A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		5898C735200B30DD00A0A63A /* RootVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootVC.swift; sourceTree = "<group>"; };
 		5898C738200B30DD00A0A63A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5898C73A200B30DD00A0A63A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5898C73D200B30DD00A0A63A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5898C73F200B30DD00A0A63A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5898C747200BD5EB00A0A63A /* GrooveVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrooveVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,7 +57,8 @@
 			isa = PBXGroup;
 			children = (
 				5898C733200B30DD00A0A63A /* AppDelegate.swift */,
-				5898C735200B30DD00A0A63A /* ViewController.swift */,
+				5898C735200B30DD00A0A63A /* RootVC.swift */,
+				5898C747200BD5EB00A0A63A /* GrooveVC.swift */,
 				5898C737200B30DD00A0A63A /* Main.storyboard */,
 				5898C73A200B30DD00A0A63A /* Assets.xcassets */,
 				5898C73C200B30DD00A0A63A /* LaunchScreen.storyboard */,
@@ -136,7 +139,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5898C736200B30DD00A0A63A /* ViewController.swift in Sources */,
+				5898C736200B30DD00A0A63A /* RootVC.swift in Sources */,
+				5898C748200BD5EB00A0A63A /* GrooveVC.swift in Sources */,
 				5898C734200B30DD00A0A63A /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -278,7 +282,7 @@
 				DEVELOPMENT_TEAM = MYZQ23D36B;
 				INFOPLIST_FILE = "Are we Grooving?/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.RyanGKist.Are-we-Grooving-";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.RyanGKist.Tic-Tac-Toe";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -293,7 +297,7 @@
 				DEVELOPMENT_TEAM = MYZQ23D36B;
 				INFOPLIST_FILE = "Are we Grooving?/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.RyanGKist.Are-we-Grooving-";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.RyanGKist.Tic-Tac-Toe";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
