@@ -9,27 +9,31 @@
 import UIKit
 import CoreMotion
 
-class GrooveVC: UIViewController {
+class GrooveVC: UIViewController , UITableViewDataSource{
     var redValueForRGB : Int = 0
     var greenValueForRGB : Int = 0
     var blueValueForRGB : Int = 0
     var swapVar : String = ""
     
-    
     var motionManager = CMMotionManager()
     let opQueue = OperationQueue()
     
-    
+    var bgColor: UIColor = .white
+    var colors : [UIColor] = [UIColor.green]
     
     @IBOutlet var grooveViewOutlet: UIView!
     @IBOutlet weak var stackViewOutlet: UIStackView!
     
+    
+    @IBOutlet weak var tableView: UITableView!
     
     let colorsToRandom : [UIColor] = [.red, .blue, .purple, .orange, .gray]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         print("Groove loaded!")
+        tableView.dataSource = self
+    
         if motionManager.isDeviceMotionAvailable{
             print("We've got a device!")
             startReadingMotionData()
@@ -121,7 +125,10 @@ class GrooveVC: UIViewController {
             }else if (self.blueValueForRGB > 255) {
                 self.blueValueForRGB = 255
             }else{
-                self.grooveViewOutlet.backgroundColor = UIColor.init(red: CGFloat(UInt32(self.redValueForRGB))/255.0, green: CGFloat(UInt32(self.greenValueForRGB))/255.0, blue: CGFloat(UInt32(self.blueValueForRGB))/255.0, alpha: 100)
+                self.bgColor = UIColor.init(red: CGFloat(UInt32(self.redValueForRGB))/255.0, green: CGFloat(UInt32(self.greenValueForRGB))/255.0, blue: CGFloat(UInt32(self.blueValueForRGB))/255.0, alpha: 100)
+                self.grooveViewOutlet.backgroundColor = self.bgColor
+                self.colors.insert(self.bgColor, at: 0)
+                self.tableView.reloadData()
             }
         }
     }
@@ -149,6 +156,17 @@ class GrooveVC: UIViewController {
     func shiftAndSwap(){
         self.shiftColor()
         self.changeColor()
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return colors.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        cell.backgroundColor = colors[indexPath.row]
+        cell.textLabel?.text = ""
+        return cell
     }
     
     
