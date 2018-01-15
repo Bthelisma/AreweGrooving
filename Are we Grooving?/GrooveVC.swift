@@ -18,21 +18,27 @@ class GrooveVC: UIViewController , UITableViewDataSource{
     var motionManager = CMMotionManager()
     let opQueue = OperationQueue()
     
+    var gender : Bool?
+    var incomingGender : Bool?
     var bgColor: UIColor = .white
-    var colors : [UIColor] = [UIColor.green]
+    var colors : [UIColor] = []
     
     @IBOutlet var grooveViewOutlet: UIView!
-    @IBOutlet weak var stackViewOutlet: UIStackView!
     
+    @IBOutlet weak var profilePic: UIImageView!
     
+    @IBOutlet weak var userName: UILabel!
+    var incomingName: String?
     @IBOutlet weak var tableView: UITableView!
-    
-    let colorsToRandom : [UIColor] = [.red, .blue, .purple, .orange, .gray]
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        userName.text = incomingName
         print("Groove loaded!")
         tableView.dataSource = self
+        gender = incomingGender
+
+        assignImage()
     
         if motionManager.isDeviceMotionAvailable{
             print("We've got a device!")
@@ -40,6 +46,7 @@ class GrooveVC: UIViewController , UITableViewDataSource{
         }else{
             print("No device detected!")
         }
+        
     }
     
     override func didReceiveMemoryWarning() {
@@ -127,7 +134,9 @@ class GrooveVC: UIViewController , UITableViewDataSource{
             }else{
                 self.bgColor = UIColor.init(red: CGFloat(UInt32(self.redValueForRGB))/255.0, green: CGFloat(UInt32(self.greenValueForRGB))/255.0, blue: CGFloat(UInt32(self.blueValueForRGB))/255.0, alpha: 100)
                 self.grooveViewOutlet.backgroundColor = self.bgColor
+                self.tableView.backgroundColor = self.bgColor
                 self.colors.insert(self.bgColor, at: 0)
+                print(self.colors.count)
                 self.tableView.reloadData()
             }
         }
@@ -168,8 +177,17 @@ class GrooveVC: UIViewController , UITableViewDataSource{
         cell.textLabel?.text = ""
         return cell
     }
+    func assignImage (){
+            if(gender!){
+                profilePic.image = #imageLiteral(resourceName: "boy")
+            }else{
+                profilePic.image = #imageLiteral(resourceName: "girl")
+            }
+    }
     
+    @IBAction func dismissPage(_ sender: UIButton) {
+        dismiss(animated: true, completion: nil)
+    }
     
-
     }
 
